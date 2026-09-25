@@ -1,0 +1,1516 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    width: 100%;
+    min-height: 60px;
+    padding: 12px 5%;
+
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #d88a19;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #d88a19;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+section {
+    width: 100%;
+    padding: 80px 7%;
+    scroll-margin-top: 70px;
+}
+
+section > h1 {
+    text-align: center;
+    color: #d88a19;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+#home {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+
+    padding: 30px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home video {
+    width: 100%;
+    max-width: 1100px;
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 25px rgba(216, 138, 25, 0.25);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+#about {
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    background: linear-gradient(
+        180deg,
+        #000 0%,
+        #0b0805 50%,
+        #000 100%
+    );
+}
+
+.poster {
+    width: 350px;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.poster img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 30px rgba(216, 138, 25, 0.25);
+}
+
+.info {
+    width: 100%;
+    max-width: 650px;
+}
+
+.info h2 {
+    color: #d88a19;
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.info h2:first-child {
+    margin-top: 0;
+}
+
+.info p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.info button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #d88a19;
+    color: #000;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.info button:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CAST & CREW
+===================================================== */
+
+#cast {
+    background-color: #000;
+}
+
+.parent {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.actor {
+    width: 250px;
+    min-height: 390px;
+
+    padding: 15px;
+
+    background-color: #0d0d0d;
+
+    border: 1px solid #292929;
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: 0.4s ease;
+}
+
+.actor:hover {
+    transform: translateY(-10px);
+
+    border-color: #d88a19;
+
+    box-shadow:
+        0 10px 30px rgba(216, 138, 25, 0.2);
+}
+
+.pic {
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.bp {
+    display: none;
+}
+
+.actor .head2 {
+    color: #d88a19;
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.actor h4 {
+    color: #aaa;
+    margin: 8px 0 15px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #fff;
+    color: #000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d88a19;
+    color: #000;
+}
+
+
+/* =====================================================
+   SONGS SECTION
+===================================================== */
+
+#songs {
+    width: 100%;
+    min-height: 600px;
+
+    background: linear-gradient(
+        180deg,
+        #000 0%,
+        #100b05 50%,
+        #000 100%
+    );
+}
+
+
+/* =====================================================
+   SONG CONTAINER
+===================================================== */
+
+.songs-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   SONG CARD
+===================================================== */
+
+.song-card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 35px 30px;
+
+    background-color: #0e0e0e;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+.song-card:hover {
+    border-color: #d88a19;
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 30px rgba(216, 138, 25, 0.15);
+}
+
+
+/* =====================================================
+   SONG TITLE
+===================================================== */
+
+.song-card h2 {
+    width: 100%;
+
+    color: #d88a19;
+
+    font-size: clamp(21px, 2.2vw, 30px);
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =====================================================
+   SONG DESCRIPTION
+===================================================== */
+
+.song-card p {
+    width: 100%;
+
+    color: #aaa;
+
+    font-size: clamp(14px, 1.5vw, 18px);
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =====================================================
+   AUDIO PLAYER
+===================================================== */
+
+.song-card audio {
+    width: 100%;
+    max-width: 100%;
+
+    height: 55px;
+
+    margin-bottom: 25px;
+
+    display: block;
+}
+
+
+/* =====================================================
+   SONG DOWNLOAD BUTTON
+===================================================== */
+
+.song-btn {
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 12px 15px;
+
+    margin-top: auto;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #d88a19;
+    color: #000;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.song-btn:hover {
+    background-color: #fff;
+
+    transform: translateY(-2px);
+}
+
+.song-btn i {
+    margin-right: 5px;
+}
+
+
+/* =====================================================
+   FAN CLUB
+===================================================== */
+
+#fanclub {
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #000;
+}
+
+.fanclub-box {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 45px;
+
+    background: linear-gradient(
+        145deg,
+        #111,
+        #080808
+    );
+
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.fanclub-box > i {
+    font-size: 45px;
+    color: #d88a19;
+    margin-bottom: 20px;
+}
+
+.fanclub-box h2 {
+    color: #d88a19;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.fanclub-box > p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+
+    color: #fff;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    background-color: #050505;
+    color: #fff;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #d88a19;
+}
+
+.input-box textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.join-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #d88a19;
+    color: #000;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+    width: 100%;
+    min-height: 400px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+
+    padding: 60px 7%;
+}
+
+
+/* =====================================================
+   FOOTER BOX
+===================================================== */
+
+.footer-box {
+    flex: 1;
+
+    min-width: 0;
+
+    padding-top: 0;
+}
+
+.footer-box h2 {
+    color: #d88a19;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    margin: 0 0 35px 0;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 32px;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d88a19;
+
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.quick-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding-left: 30px;
+}
+
+.quick-links h2 {
+    margin-bottom: 35px;
+}
+
+.quick-links a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #d88a19;
+
+    padding-left: 5px;
+}
+
+
+/* =====================================================
+   PAYMENT SECTION
+===================================================== */
+
+.payment-box {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.payment-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment {
+    width: 68px;
+    height: 53px;
+
+    background-color: #fff;
+    color: #000;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   VISA
+===================================================== */
+
+.visa {
+    font-size: 21px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   MASTERCARD
+===================================================== */
+
+.mastercard {
+    flex-direction: column;
+
+    gap: 0;
+
+    line-height: 1;
+}
+
+.master-circle {
+    font-size: 28px;
+}
+
+.mastercard small {
+    font-size: 7px;
+}
+
+
+/* =====================================================
+   PAYPAL
+===================================================== */
+
+.paypal {
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.card-icon {
+    position: relative;
+
+    background-color: #000;
+
+    border: 4px solid #fff;
+}
+
+.card-icon span {
+    position: absolute;
+
+    top: 9px;
+    left: 7px;
+
+    width: 45px;
+    height: 5px;
+
+    background-color: #fff;
+
+    border-radius: 3px;
+}
+
+.card-icon b {
+    position: absolute;
+
+    bottom: 5px;
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    border-top: 1px solid #555;
+
+    padding: 50px 20px 30px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER POLICY
+===================================================== */
+
+.footer-policy {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 45px;
+
+    flex-wrap: wrap;
+}
+
+.footer-policy a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.footer-policy span {
+    color: #fff;
+
+    font-size: 20px;
+}
+
+.footer-policy a:hover {
+    color: #d88a19;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.footer-bottom p {
+    color: #fff;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 12px 4%;
+    }
+
+    header ul {
+        gap: 20px;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    #home video {
+        height: 500px;
+    }
+
+    #about {
+        gap: 35px;
+    }
+
+    .poster {
+        width: 300px;
+    }
+
+    .poster img {
+        height: 430px;
+    }
+
+    .songs-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+    .song-card {
+        padding: 30px 25px;
+    }
+
+    .footer-container {
+        padding: 50px 5%;
+        gap: 25px;
+    }
+
+    .quick-links {
+        padding-left: 10px;
+    }
+
+    .quick-links a {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        gap: 18px;
+    }
+
+    .payment-icons {
+        gap: 10px;
+    }
+
+    .payment {
+        width: 58px;
+        height: 48px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    header {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+
+        text-align: center;
+    }
+
+    header ul {
+        width: 100%;
+
+        gap: 12px 18px;
+
+        justify-content: center;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+
+    /* SECTION */
+
+    section {
+        width: 100%;
+
+        padding: 55px 15px;
+    }
+
+    section > h1 {
+        font-size: 27px;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* HOME */
+
+    #home {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px 15px;
+    }
+
+    #home video {
+        width: 100%;
+
+        height: 250px;
+
+        border-radius: 8px;
+    }
+
+
+    /* ABOUT */
+
+    #about {
+        width: 100%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+
+        padding: 60px 20px;
+    }
+
+    .poster {
+        width: 280px;
+
+        max-width: 100%;
+    }
+
+    .poster img {
+        width: 100%;
+
+        height: 400px;
+    }
+
+    .info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info p {
+        text-align: left;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* CAST */
+
+    .parent {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    .actor {
+        width: 100%;
+
+        max-width: 320px;
+
+        min-height: auto;
+    }
+
+    .pic {
+        height: 320px;
+    }
+
+
+    /* =================================================
+       SONGS - MOBILE FIX
+    ================================================= */
+
+    #songs {
+        width: 100%;
+
+        padding: 60px 15px;
+    }
+
+    .songs-container {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .song-card {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 25px 18px;
+
+        border-radius: 12px;
+    }
+
+    .song-card h2 {
+        width: 100%;
+
+        font-size: 23px;
+
+        line-height: 1.3;
+    }
+
+    .song-card p {
+        width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+    .song-card audio {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 50px;
+
+        margin-bottom: 20px;
+    }
+
+    .song-btn {
+        width: 100%;
+
+        min-height: 52px;
+
+        padding: 10px;
+
+        font-size: 16px;
+    }
+
+
+    /* FAN CLUB */
+
+    #fanclub {
+        width: 100%;
+
+        padding: 60px 15px;
+    }
+
+    .fanclub-box {
+        width: 100%;
+
+        padding: 30px 20px;
+
+        border-radius: 12px;
+    }
+
+    .fanclub-box h2 {
+        font-size: 24px;
+    }
+
+    .fanclub-box > p {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        width: 100%;
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+
+        padding: 45px 20px;
+    }
+
+    .footer-box {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .footer-box h2 {
+        font-size: 22px;
+
+        margin-bottom: 25px;
+    }
+
+    .social-icons {
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .social-icons a {
+        font-size: 28px;
+    }
+
+    .quick-links {
+        width: 100%;
+
+        padding-left: 0;
+
+        align-items: center;
+    }
+
+    .quick-links h2 {
+        margin-bottom: 25px;
+    }
+
+    .quick-links a {
+        font-size: 18px;
+
+        margin-bottom: 15px;
+    }
+
+    .payment-box {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .payment-icons {
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .payment {
+        width: 55px;
+
+        height: 45px;
+    }
+
+
+    /* FOOTER BOTTOM */
+
+    .footer-bottom {
+        padding: 40px 15px 25px;
+    }
+
+    .footer-policy {
+        gap: 10px;
+
+        margin-bottom: 30px;
+    }
+
+    .footer-policy a {
+        font-size: 15px;
+    }
+
+    .footer-policy span {
+        font-size: 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 14px 10px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header ul {
+        gap: 10px 12px;
+    }
+
+    header ul li a {
+        font-size: 13px;
+    }
+
+
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    section > h1 {
+        font-size: 24px;
+    }
+
+
+    #home {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #home video {
+        height: 210px;
+    }
+
+
+    .poster {
+        width: 250px;
+    }
+
+    .poster img {
+        height: 350px;
+    }
+
+
+    .actor {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .pic {
+        height: 280px;
+    }
+
+
+    /* SONG SMALL MOBILE */
+
+    #songs {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .songs-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .song-card {
+        width: 100%;
+
+        padding: 22px 15px;
+    }
+
+    .song-card h2 {
+        font-size: 21px;
+    }
+
+    .song-card p {
+        font-size: 14px;
+    }
+
+    .song-card audio {
+        width: 100%;
+
+        height: 48px;
+    }
+
+    .song-btn {
+        width: 100%;
+
+        font-size: 15px;
+
+        min-height: 50px;
+    }
+
+
+    .fanclub-box {
+        padding: 25px 15px;
+    }
+
+    .fanclub-box h2 {
+        font-size: 21px;
+    }
+
+
+    .footer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-policy a {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL SCREEN
+===================================================== */
+
+@media (max-width: 320px) {
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    header ul {
+        gap: 8px 10px;
+    }
+
+    header ul li a {
+        font-size: 12px;
+    }
+
+    .song-card {
+        padding: 20px 12px;
+    }
+
+    .song-card h2 {
+        font-size: 19px;
+    }
+
+    .song-card p {
+        font-size: 13px;
+    }
+
+    .song-btn {
+        font-size: 14px;
+    }
+
+    .payment {
+        width: 50px;
+        height: 42px;
+    }
+}
